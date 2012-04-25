@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="xmlrcp">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/xmlrpc-2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
