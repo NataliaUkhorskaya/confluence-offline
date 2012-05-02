@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.google.code.cli-parser:cli:7">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/cli-parser/cli/7/cli-7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/cli-parser/cli/7/cli-7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/cli-parser/cli/7/cli-7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

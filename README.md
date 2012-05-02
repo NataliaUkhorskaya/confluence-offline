@@ -1,4 +1,4 @@
-confluence-offline-editor
+confluence-offline
 =========================
 
 Download content from confluence space, edit it and load it back
@@ -14,6 +14,5 @@ Download content from confluence space, edit it and load it back
 
 * confluence.server=http://confluence.com  - confluence server url
 * confluence.username=user - username for confluence server
-* confluence.password=password  - password for confluence server
 * confluence.space=MySpace - space on Confluence
 * confluence.root.directory=confluence - directory to store content from confluence

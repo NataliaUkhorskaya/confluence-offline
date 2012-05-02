@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Maven: org.jetbrains.annotations:annotations:1.0">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/annotations.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/confluence-offline-editor.iml" filepath="$PROJECT_DIR$/confluence-offline-editor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/confluence-offline.iml" filepath="$PROJECT_DIR$/confluence-offline.iml" />
     </modules>
   </component>
 </project>
