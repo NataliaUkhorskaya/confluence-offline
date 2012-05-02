@@ -1,7 +1,7 @@
-package org.jetbrains.confluence.editor;
+package org.jetbrains.confluence;
 
 import org.jetbrains.annotations.Nullable;
-import org.jetbrains.confluence.editor.model.ConfluencePage;
+import org.jetbrains.confluence.model.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -20,7 +20,7 @@ import java.util.Map;
  */
 
 public class IndexFileModel {
-    private File index = new File(ConfluenceConfig.CONFLUENCE_ROOT_DIRECTORY + File.separatorChar + "index.xml");
+    private File index = new File(ConfluenceConfig.ROOT_DIRECTORY + File.separatorChar + "index.xml");
 
     private static IndexFileModel instance = new IndexFileModel();
 
@@ -224,7 +224,7 @@ public class IndexFileModel {
             return;
         }
 
-        File rootDir = new File(ConfluenceConfig.CONFLUENCE_ROOT_DIRECTORY + File.separatorChar + ConfluenceConfig.CONFLUENCE_SPACE);
+        File rootDir = new File(ConfluenceConfig.ROOT_DIRECTORY + File.separatorChar + ConfluenceConfig.CONFLUENCE_SPACE);
         if (!rootDir.exists()) {
             System.err.println("Root directory doesn't exists.");
         }

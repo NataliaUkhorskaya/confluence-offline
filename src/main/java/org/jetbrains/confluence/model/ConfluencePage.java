@@ -1,7 +1,7 @@
-package org.jetbrains.confluence.editor.model;
+package org.jetbrains.confluence.model;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.confluence.editor.ConfluenceConfig;
+import org.jetbrains.confluence.ConfluenceConfig;
 
 import java.io.File;
 import java.io.UnsupportedEncodingException;
@@ -69,10 +69,10 @@ public class ConfluencePage {
                 e.printStackTrace();
                 return "";
             }
-            filePath = new File(ConfluenceConfig.CONFLUENCE_ROOT_DIRECTORY + File.separatorChar +
+            filePath = new File(ConfluenceConfig.ROOT_DIRECTORY + File.separatorChar +
                     spaceNameEncoded + File.separatorChar + fileNameEncoded + ".confluence").getAbsolutePath();
         }
-        return filePath;
+        return filePath.trim();
     }
 
     public String getVersion() {

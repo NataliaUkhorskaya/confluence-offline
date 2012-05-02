@@ -2,9 +2,8 @@ package it;
 
 import junit.framework.TestCase;
 import org.apache.commons.lang.math.RandomUtils;
-import org.jetbrains.confluence.editor.*;
-import org.jetbrains.confluence.editor.model.ConfluencePage;
-import org.jetbrains.confluence.editor.model.ConfluenceSpace;
+import org.jetbrains.confluence.*;
+import org.jetbrains.confluence.model.*;
 
 import java.io.File;
 import java.util.Hashtable;
@@ -230,7 +229,7 @@ public class ConfluenceIntegrationTest extends TestCase {
     }
 
     private ConfluencePage getPageFromFileSystem() {
-        File[] files = new File(ConfluenceConfig.CONFLUENCE_ROOT_DIRECTORY + File.separatorChar + "TestSpace").listFiles();
+        File[] files = new File(ConfluenceConfig.ROOT_DIRECTORY + File.separatorChar + "TestSpace").listFiles();
         assert files != null;
         File file = files[0];
         ConfluencePage pageFromFileSystem = IndexFileModel.getInstance().getPageInfo(file.getAbsolutePath());

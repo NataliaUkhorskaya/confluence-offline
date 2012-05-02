@@ -1,11 +1,14 @@
-package org.jetbrains.confluence.editor;
+package org.jetbrains.confluence;
 
 import org.apache.xmlrpc.XmlRpcClient;
 import org.jetbrains.annotations.Nullable;
-import org.jetbrains.confluence.editor.model.ConfluencePage;
-import org.jetbrains.confluence.editor.model.ConfluenceSpace;
+import org.jetbrains.confluence.model.ConfluencePage;
+import org.jetbrains.confluence.model.ConfluenceSpace;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.util.*;
 
@@ -29,10 +32,33 @@ public class ConfluenceConnector {
     public void login() {
         Vector<Object> params = new Vector<Object>();
         params.add(ConfluenceConfig.CONFLUENCE_USERNAME);
+        String password = "";
+        if (ConfluenceConfig.CONFLUENCE_PASSWORD.isEmpty()) {
+            System.out.println("Enter you password:");
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            while (true) {
+                try {
+                    Thread.sleep(100);
+                    if (System.in.available() > 0) {
+                        password = reader.readLine();
+                        break;
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        ConfluenceConfig.CONFLUENCE_PASSWORD = password;
         params.add(ConfluenceConfig.CONFLUENCE_PASSWORD);
         Object result = remoteCall(ConfluenceRequests.LOGIN, params);
-        if (result != null) {
+        if (result != null && result instanceof String) {
             authorizationToken = (String) result;
+        }
+        else {
+            System.err.println(result);
+            System.exit(1);
         }
     }
 

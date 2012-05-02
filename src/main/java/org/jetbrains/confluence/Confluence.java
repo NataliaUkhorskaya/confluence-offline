@@ -1,7 +1,6 @@
-package org.jetbrains.confluence.editor;
+package org.jetbrains.confluence;
 
-import org.jetbrains.confluence.editor.model.ConfluencePage;
-import org.jetbrains.confluence.editor.model.ConfluenceSpace;
+import org.jetbrains.confluence.model.*;
 
 import java.io.File;
 import java.util.Collection;
@@ -45,7 +44,7 @@ public class Confluence {
         List<String> pageIds = ConfluenceConnector.getInstance().getPageIds(space.getKey());
         Map<String, ConfluencePage> pages = ConfluenceConnector.getInstance().getPages(pageIds);
 
-        File rootDir = new File(ConfluenceConfig.CONFLUENCE_ROOT_DIRECTORY + File.separatorChar + ConfluenceConfig.CONFLUENCE_SPACE);
+        File rootDir = new File(ConfluenceConfig.ROOT_DIRECTORY + File.separatorChar + ConfluenceConfig.CONFLUENCE_SPACE);
         if (rootDir.exists()) {
             File[] files = rootDir.listFiles();
             if (files == null) {
@@ -148,7 +147,7 @@ public class Confluence {
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
     private boolean savePagesToFileSystem(Collection<ConfluencePage> pages, boolean isRewrite) {
-        File rootDir = new File(ConfluenceConfig.CONFLUENCE_ROOT_DIRECTORY + File.separatorChar + ConfluenceConfig.CONFLUENCE_SPACE);
+        File rootDir = new File(ConfluenceConfig.ROOT_DIRECTORY + File.separatorChar + ConfluenceConfig.CONFLUENCE_SPACE);
         if (isRewrite && rootDir.exists()) {
             rootDir.delete();
             File[] files = rootDir.listFiles();

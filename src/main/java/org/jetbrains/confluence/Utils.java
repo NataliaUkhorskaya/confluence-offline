@@ -1,4 +1,4 @@
-package org.jetbrains.confluence.editor;
+package org.jetbrains.confluence;
 
 import org.jetbrains.annotations.Nullable;
 import org.w3c.dom.Document;

@@ -1,4 +1,4 @@
-package org.jetbrains.confluence.editor.model;
+package org.jetbrains.confluence.model;
 
 import org.jetbrains.annotations.NotNull;
 

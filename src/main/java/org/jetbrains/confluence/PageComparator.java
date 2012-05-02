@@ -1,6 +1,6 @@
-package org.jetbrains.confluence.editor;
+package org.jetbrains.confluence;
 
-import org.jetbrains.confluence.editor.model.ConfluencePage;
+import org.jetbrains.confluence.model.*;
 
 /**
  * @author Natalia.Ukhorskaya

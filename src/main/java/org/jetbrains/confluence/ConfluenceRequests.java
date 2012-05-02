@@ -1,4 +1,4 @@
-package org.jetbrains.confluence.editor;
+package org.jetbrains.confluence;
 
 /**
  * @author Natalia.Ukhorskaya
