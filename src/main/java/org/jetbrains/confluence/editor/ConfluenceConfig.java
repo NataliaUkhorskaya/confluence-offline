@@ -42,6 +42,9 @@ public class ConfluenceConfig {
                 else if (name.equals("confluence.space")) {
                     CONFLUENCE_SPACE = value;
                 }
+                else if (name.equals("confluence.root.directory")) {
+                    CONFLUENCE_ROOT_DIRECTORY = value;
+                }
             }
             File confluenceRootDirectory = new File(CONFLUENCE_ROOT_DIRECTORY);
             if (!confluenceRootDirectory.exists()) {
