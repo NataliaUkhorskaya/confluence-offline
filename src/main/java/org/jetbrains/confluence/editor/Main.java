@@ -34,6 +34,7 @@ public class Main {
             Confluence.getInstance().loadAllContent();
         }
         else if (args[0].equals("-upload")) {
+
             IndexFileModel.getInstance().updateContentHashFromFileSystem();
             Confluence.getInstance().uploadContent();
         }

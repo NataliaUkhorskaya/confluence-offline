@@ -21,16 +21,9 @@ public class ConfluenceSpace {
         return key;
     }
 
-    public void setKey(String key) {
-        this.key = key;
-    }
-
     @NotNull
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 }

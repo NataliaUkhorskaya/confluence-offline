@@ -1,7 +1,6 @@
 package org.jetbrains.confluence.editor.model;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.jetbrains.confluence.editor.ConfluenceConfig;
 
 import java.io.File;

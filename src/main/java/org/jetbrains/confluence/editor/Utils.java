@@ -59,7 +59,7 @@ public class Utils {
     }
 
     public static String substringExtension(String fileName) {
-        return fileName.substring(0, fileName.length() - 10);
+        return fileName.substring(0, fileName.length() - 11);
     }
 
     @Nullable

@@ -45,6 +45,7 @@ public class ConfluenceConfig {
             }
             File confluenceRootDirectory = new File(CONFLUENCE_ROOT_DIRECTORY);
             if (!confluenceRootDirectory.exists()) {
+                //noinspection ResultOfMethodCallIgnored
                 confluenceRootDirectory.mkdirs();
             }
             return true;
