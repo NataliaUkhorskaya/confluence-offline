@@ -15,5 +15,5 @@ public class ConfluenceRequests {
     public static String GET_PAGE_HISTORY = "confluence1.getPageHistory";
     public static String GET_PAGE = "confluence1.getPage";
     public static String LOGIN = "confluence1.login";
-    public static String ADD_SPACE = "confluence1.storeSpace";
+    public static String ADD_SPACE = "confluence1.addSpace";
 }

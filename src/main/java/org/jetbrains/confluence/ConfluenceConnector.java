@@ -5,10 +5,7 @@ import org.jetbrains.annotations.Nullable;
 import org.jetbrains.confluence.model.ConfluencePage;
 import org.jetbrains.confluence.model.ConfluenceSpace;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.util.*;
 
@@ -32,15 +29,19 @@ public class ConfluenceConnector {
     public void login() {
         Vector<Object> params = new Vector<Object>();
         params.add(ConfluenceConfig.CONFLUENCE_USERNAME);
-        String password = "";
         if (ConfluenceConfig.CONFLUENCE_PASSWORD.isEmpty()) {
-            System.out.println("Enter you password:");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            System.out.println("Enter you password on confluence:");
             while (true) {
                 try {
                     Thread.sleep(100);
                     if (System.in.available() > 0) {
-                        password = reader.readLine();
+                        if (System.console() != null) {
+                            char[] password = System.console().readPassword();
+                            ConfluenceConfig.CONFLUENCE_PASSWORD = String.copyValueOf(password);
+                        } else {
+                            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                            ConfluenceConfig.CONFLUENCE_PASSWORD = reader.readLine();
+                        }
                         break;
                     }
                 } catch (IOException e) {
@@ -50,7 +51,6 @@ public class ConfluenceConnector {
                 }
             }
         }
-        ConfluenceConfig.CONFLUENCE_PASSWORD = password;
         params.add(ConfluenceConfig.CONFLUENCE_PASSWORD);
         Object result = remoteCall(ConfluenceRequests.LOGIN, params);
         if (result != null && result instanceof String) {

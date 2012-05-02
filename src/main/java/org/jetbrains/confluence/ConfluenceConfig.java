@@ -35,12 +35,10 @@ public class ConfluenceConfig {
                 String value = properties.get(name).toString();
                 if (name.equals("confluence.server")) {
                     CONFLUENCE_SERVER = value;
+                    System.out.println();
                 }
                 else if (name.equals("confluence.username")) {
                     CONFLUENCE_USERNAME = value;
-                }
-                else if (name.equals("confluence.password")) {
-                    CONFLUENCE_PASSWORD = value;
                 }
                 else if (name.equals("confluence.space")) {
                     CONFLUENCE_SPACE = value;
@@ -65,6 +63,7 @@ public class ConfluenceConfig {
         File file = new File("confluence.properties");
         if (!file.exists()) {
             try {
+                //noinspection ResultOfMethodCallIgnored
                 file.createNewFile();
             } catch (IOException e) {
                 e.printStackTrace();
