@@ -68,6 +68,13 @@
             <artifactId>cli</artifactId>
             <version>7</version>
         </dependency>
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.0.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/activation-1.0.2.jar</systemPath>
+        </dependency>
 
     </dependencies>
 
