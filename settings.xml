@@ -253,10 +253,28 @@ under the License.
                 <repository>
                     <id>atlassian-public</id>
                     <url>https://m2proxy.atlassian.com/repository/public</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>daily</updatePolicy>
+                        <checksumPolicy>warn</checksumPolicy>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                        <checksumPolicy>warn</checksumPolicy>
+                    </releases>
                 </repository>
                 <repository>
                     <id>central</id>
                     <url>http://repo.maven.apache.org/maven2</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>daily</updatePolicy>
+                        <checksumPolicy>warn</checksumPolicy>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                        <checksumPolicy>warn</checksumPolicy>
+                    </releases>
                 </repository>
             </repositories>
 
@@ -264,6 +282,15 @@ under the License.
                 <pluginRepository>
                     <id>atlassian-public</id>
                     <url>https://m2proxy.atlassian.com/repository/public</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>daily</updatePolicy>
+                        <checksumPolicy>warn</checksumPolicy>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                        <checksumPolicy>warn</checksumPolicy>
+                    </releases>
                 </pluginRepository>
             </pluginRepositories>
             <properties>
