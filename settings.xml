@@ -254,6 +254,10 @@ under the License.
                     <id>atlassian-public</id>
                     <url>https://m2proxy.atlassian.com/repository/public</url>
                 </repository>
+                <repository>
+                    <id>central</id>
+                    <url>http://repo.maven.apache.org/maven2</url>
+                </repository>
             </repositories>
 
             <pluginRepositories>
