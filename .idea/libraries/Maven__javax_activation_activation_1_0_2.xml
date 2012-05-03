@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Maven: javax.activation:activation:1.0.2">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/activation-1.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.0.2/activation-1.0.2.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.0.2/activation-1.0.2-javadoc.jar!/" />
