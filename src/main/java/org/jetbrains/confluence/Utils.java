@@ -16,9 +16,9 @@ import java.io.*;
 public class Utils {
 
     public static void writeToFile(File file, String text) {
-        FileWriter writer = null;
+        OutputStreamWriter writer = null;
         try {
-            writer = new FileWriter(file);
+            writer = new OutputStreamWriter(new FileOutputStream(file), "UTF-8");
             writer.write(text);
         } catch (IOException e) {
             e.printStackTrace();
@@ -34,9 +34,9 @@ public class Utils {
     }
 
     public static String readFromFile(File file) {
-        FileReader reader = null;
+        InputStreamReader reader = null;
         try {
-            reader = new FileReader(file);
+            reader =  new InputStreamReader(new FileInputStream(file), "UTF-8");
             StringBuilder builder = new StringBuilder();
             int c;
             while ((c = reader.read()) >= 0) {

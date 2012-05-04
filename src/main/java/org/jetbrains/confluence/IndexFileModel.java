@@ -110,7 +110,7 @@ public class IndexFileModel {
             index.createNewFile();
             Map<String, ConfluencePage> map = Confluence.getInstance().getPagesHashMap();
             StringBuilder builder = new StringBuilder();
-            builder.append("<?xml version=\"1.0\"?>");
+            builder.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
             builder.append("<space>");
             for (ConfluencePage page : map.values()) {
                 builder.append("<page path=\"");
