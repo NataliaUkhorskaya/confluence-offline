@@ -257,7 +257,7 @@ public class Confluence {
             System.err.println("You have local change on page.");
             System.err.println("   Page from server:      " + pageFromServer.getFilePath() + " " + pageFromServer.getHashCode() + " " + pageFromServer.getVersion());
             System.err.println("   Page from file system: " + pageFromFileSystem.getFilePath() + " " + pageFromFileSystem.getHashCode() + " " + pageFromFileSystem.getVersion());
-            System.err.println("   Version from server was saved into " + pageFromFileSystem.getFilePath() + "_local file.");
+            System.err.println("   Your local file was saved into " + pageFromFileSystem.getFilePath() + "_local file.");
             return false;
         }
     }
