@@ -68,7 +68,8 @@ public class Confluence {
                 ConfluencePage pageFromServer = pages.get(pageFromFileSystem.getId());
 
                 if (pageFromServer == null) {
-                    ConfluenceConnector.getInstance().savePage(pageFromFileSystem, true);
+                    boolean tmpResult = ConfluenceConnector.getInstance().savePage(pageFromFileSystem, true);
+                    if (!tmpResult) result = false;
                     continue;
                 }
 
