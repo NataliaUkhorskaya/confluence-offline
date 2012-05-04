@@ -213,7 +213,7 @@ public class ConfluenceConnector {
         params.add(authorizationToken);
         params.add(pageData);
         Hashtable<String, String> updateOptions = new Hashtable<String, String>();
-        updateOptions.put("versionComment", "Modified in Offline Confluence Editor");
+        updateOptions.put("versionComment", "Modified in Offline Confluence");
         updateOptions.put("minorEdit", "false");
         params.add(updateOptions);
         Object o = remoteCall(ConfluenceRequests.UPDATE_PAGE, params);
