@@ -34,6 +34,7 @@ public class Main {
 //                ConfluenceConfig.parsePropertiesFile();
                 Confluence.getInstance().login();
                 IndexFileModel.getInstance().createIndexFile();
+                System.out.println("Downloading content... Please wait.");
                 Confluence.getInstance().loadAllContent();
             }
         }
@@ -41,6 +42,7 @@ public class Main {
             ConfluenceConfig.parsePropertiesFile();
             Confluence.getInstance().login();
             if (arguments.update){
+                System.out.println("Updating content... Please wait.");
                 IndexFileModel.getInstance().updateContentHashFromFileSystem();
 
                 if (arguments.file != null) {
@@ -49,6 +51,7 @@ public class Main {
                     Confluence.getInstance().updateContent(arguments.force);
                 }
             } else if (arguments.upload) {
+                System.out.println("Uploading content to server... Please wait.");
                 IndexFileModel.getInstance().updateContentHashFromFileSystem();
                 Confluence.getInstance().uploadContent();
             }
